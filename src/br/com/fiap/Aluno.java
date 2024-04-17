@@ -26,7 +26,7 @@ public class Aluno {
             if (rm >= 95001 && rm <= 552999) {
                 this.rm = rm;
             } else {
-                throw new Exception("Atributo rm deve ser maior ou igual a 95001e menor ou igual a 552999");
+                throw new Exception("RM deve ser maior ou igual a 95001e menor ou igual a 552999");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -51,7 +51,7 @@ public class Aluno {
             if (anoDeNascimento >= 1900 && anoDeNascimento <= LocalDate.now().getYear()) {
                 this.dataDeNascimento = dataDeNascimento;
             } else {
-                throw new Exception("Atributo dataDeNascimento deve ser maior ou igual a 1900 e menor ou igual ao ano atual.");
+                throw new Exception("Data de nascimento deve ser maior ou igual a 1900 e menor ou igual ao ano atual.");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
