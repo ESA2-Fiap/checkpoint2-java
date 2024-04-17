@@ -26,7 +26,7 @@ public class Aluno {
             if (rm >= 95001 && rm <= 552999) {
                 this.rm = rm;
             } else {
-                throw new Exception("Atributo rmdeve ser maior ou igual a 95001e menor ou igual a 552999");
+                throw new Exception("RM deve ser maior ou igual a 95001e menor ou igual a 552999");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -51,7 +51,7 @@ public class Aluno {
             if (anoDeNascimento >= 1900 && anoDeNascimento <= LocalDate.now().getYear()) {
                 this.dataDeNascimento = dataDeNascimento;
             } else {
-                throw new Exception("Atributo dataDeNascimentodeve ser maior ou igual a 1900 e menor ou igual ao ano atual.");
+                throw new Exception("Data de nascimento deve ser maior ou igual a 1900 e menor ou igual ao ano atual.");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -59,7 +59,7 @@ public class Aluno {
     }
 
     public String calculaIdadeCompleta(LocalDate dataAtual) {
-        Period dataAtualParaIdade = Period.between(dataAtual, this.dataDeNascimento);
+        Period dataAtualParaIdade = Period.between(this.dataDeNascimento, dataAtual);
         return "Idade Completa\n" + "Anos: " + dataAtualParaIdade.getYears() + "\nMeses: " + dataAtualParaIdade.getMonths() + "\nDias: " + dataAtualParaIdade.getDays();
     }
 }
