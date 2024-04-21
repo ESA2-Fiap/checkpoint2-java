@@ -14,9 +14,9 @@ public class Aluno {
     }
 
     public Aluno(int rm, String nome, LocalDate dataDeNascimento) {
-        this.rm = rm;
+        this.setRm(rm);
         this.nome = nome;
-        this.dataDeNascimento = dataDeNascimento;
+        this.setDataDeNascimento(dataDeNascimento);
     }
 
     public int getRm() {
